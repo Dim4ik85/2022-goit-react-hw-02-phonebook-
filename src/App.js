@@ -20,9 +20,16 @@ class App extends Component {
     return this.state.contacts.find(({ name }) => name === newName);
   };
 
-  deleteContact = oldName => {
+  //через name
+  // deleteContact = oldName => {
+  //   this.setState({
+  //     contacts: this.state.contacts.filter(({ name }) => name !== oldName),
+  //   });
+  // };
+
+  deleteContact = contactId => {
     this.setState({
-      contacts: this.state.contacts.filter(({ name }) => name !== oldName),
+      contacts: this.state.contacts.filter(({ id }) => id !== contactId),
     });
   };
 
